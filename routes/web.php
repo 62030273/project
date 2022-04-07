@@ -22,6 +22,9 @@ route::resource('course_config','App\Http\Controllers\CourseConfigController');
 route::resource('class_check_student','App\Http\Controllers\ClassCheckStudentController');
 route::delete('class_check_student.destroy/{ccs_cc_id}/{ccs_std_code}','App\Http\Controllers\ClassCheckStudentController@destroy')->name('classcheckstudent.destroy');
 route::delete('enroll.destroy/{enr_sect}/{enr_seq}','App\Http\Controllers\EnrollController@destroy')->name('enroll.destroy');//ยังทำส่ง2ตัวแปรไม่ได้
+route::resource('elle','App\Http\Controllers\StatusQuiz3Controller');
+route::resource('quiz3','App\Http\Controllers\Quiz3Controller');
+
 //  ยังไม่ทำ 
  //  ยังไม่ทำ 
 route::resource('course','App\Http\Controllers\CourseController');//  ยังไม่ทำ
