@@ -18,7 +18,7 @@
 				<td align ="center" >Class ID</td>
 				<td align ="center" >Year</td>
 				<td align ="center" >Term</td>
-				<td align ="center" >Student Code</td>
+				<td align ="center" >Course Code</td>
 
 				<td align ="center" >Sect</td>
 				<td align ="center" >Date</td>

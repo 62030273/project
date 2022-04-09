@@ -27,6 +27,7 @@ route::resource('quiz3','App\Http\Controllers\Quiz3Controller');
 route::resource('course','App\Http\Controllers\CourseController');
 route::resource('enroll','App\Http\Controllers\EnrollController');
 route::delete('enroll.destroy/{enr_std_code}/{enr_crs_code}','App\Http\Controllers\EnrollController@destroy')->name('enroll.destroy');
+route::get('enroll.edit/{enr_std_code}/{enr_crs_code}','App\Http\Controllers\EnrollController@edit')->name('enroll.edit');
 route::resource('exam','App\Http\Controllers\ExamController');
 route::delete('exam.destroy/{ex_id}/{ex_std_code}','App\Http\Controllers\ExamController@destroy')->name('exam.destroy');
 route::resource('exam_control','App\Http\Controllers\ExamControlController');
@@ -39,7 +40,7 @@ route::delete('question.destroy/{qs_id}','App\Http\Controllers\QuestionControlle
 route::resource('student','App\Http\Controllers\StudentController');
 route::resource('teacher','App\Http\Controllers\TeacherController');
 route::resource('teacher_teach','App\Http\Controllers\TeacherTeachController'); 
-route::delete('teacher_teach.destroy/{tt_crs_code}','App\Http\Controllers\TeacherTeachController@destroy')->name('teacher_teach.destroy');
+route::delete('teacher_teach.destroy/{tt_crs_code}/{tt_tch_code}','App\Http\Controllers\TeacherTeachController@destroy')->name('teacher_teach.destroy');
 
 
 Route::get('/', function () {

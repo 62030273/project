@@ -37,26 +37,26 @@
        
 
             <div class="form-group">
-                <strong>tt_year</strong>
+                <strong>ปีการศึกษา</strong>
                 <input type="text"   value="{{ $teat->tt_year}}"name="tt_year" class="form-control" placeholder="Char(4)">
             </div>
 
             <div class="form-group">
-                <strong>tt_term</strong>
+                <strong>เทอม</strong>
                 <input type="text"   value="{{ $teat->tt_term}}"name="tt_term" class="form-control" placeholder="Char(1)">
             </div>
 
             <div class="form-group">
-                <strong>tt_crs_code</strong>
+                <strong>รหัสรายวิชา</strong>
                 <input type="text" readonly  value="{{ $teat->tt_crs_code}}"name="tt_crs_code" class="form-control" placeholder="vaChar(10)">
             </div>
             <div class="form-group">
-                <strong>tt_sect</strong>
+                <strong>กลุ่ม</strong>
                 <input type="text"   value="{{ $teat->tt_sect}}"name="tt_sect" class="form-control" placeholder="vaChar(4)">
             </div>
 
             <div class="form-group">
-                <strong>tt_tch_code</strong>
+                <strong>รหัสอาจารย์</strong>
                 <input type="text" readonly  value="{{ $teat->tt_tch_code}}" name="tt_tch_code" class="form-control" placeholder="Char(20)">
             </div>
 

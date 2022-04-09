@@ -15,7 +15,7 @@
 @foreach($enroll as $enr)
 @endforeach
 
-<form action="{{ route('enroll.update',['enr_std_code'=>$enr->enr_std_code,'enr_crs_code'=>$enr->enr_crs_code] )}}" method="POST">
+<form action="{{ route('enroll.update', ['enr_std_code'=>$enr->enr_std_code,'enr_crs_code'=>$enr->enr_crs_code]) }}" method="POST">
 
     @csrf
     @method("PUT")
