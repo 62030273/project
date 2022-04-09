@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+route::resource('elle','App\Http\Controllers\StatusQuiz3Controller');
+route::resource('quiz3','App\Http\Controllers\Quiz3Controller');
 route::resource('statuswork','App\Http\Controllers\STATUSController');
 route::resource('choice','App\Http\Controllers\ChoiceController');
 route::delete('choice.destroy/{ch_qs_id}/{ch_no}','App\Http\Controllers\ChoiceController@destroy')->name('choice.destroy');
