@@ -44,7 +44,7 @@
 
 
 				<td align ="center" >
-					<form action="{{ route('class_check.destroy',$clak->cc_id) }}" method="POST" >
+					<form action="{{ route('class_check.destroy',['cc_id'=>$clak->cc_id]) }}" method="POST" >
 						<a class="btn btn-primary" href="{{ route('class_check.edit',$clak->cc_id) }}"> Edit</a>
 						@csrf
 						@method('DELETE')

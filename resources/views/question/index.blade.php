@@ -41,7 +41,7 @@
 				
 
 				<td align ="center" >
-					<form action="{{ route('question.destroy',$qui->qs_id) }}" method="POST" >
+					<form action="{{ route('question.destroy',['qs_id'=>$qui->qs_id]) }}" method="POST" >
 						<a class="btn btn-primary" href="{{ route('question.edit',$qui->qs_id) }}"> Edit</a>
 						@csrf
 						@method('DELETE')

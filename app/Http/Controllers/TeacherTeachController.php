@@ -121,7 +121,8 @@ class TeacherTeachController extends Controller
     public function destroy($id)
     {
         DB::table('teacher_teach')
-        ->where('tt_crs_code','=',$id)
+        ->where('tt_crs_code','=',$tt_crs_code)
+        ->where('tt_tch_code','=',$tt_tch_code)
         ->delete();
         
         return redirect('teacher_teach');

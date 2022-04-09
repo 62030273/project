@@ -133,7 +133,7 @@ class QuestionController extends Controller
     public function destroy($id)
     {
         DB::table('question')
-        ->where('qs_id','=',$id)
+        ->where('qs_id','=',$qs_id)
        
         ->delete();
         
