@@ -57,7 +57,7 @@ a     {color: #FF0000;}
 				<td align ="center" >รหัสผู้ดูแล</td>
 				<td align ="center" >จำนวนการแก้ไข</td>
 				<td align ="center" >รายละเอียด</td>
-				<td colspan=2>Operrations</td>
+				<td colspan=2>เครื่องมือ</td>
 			</tr>
 			@foreach($statuswork as $stw)
 			<tr>

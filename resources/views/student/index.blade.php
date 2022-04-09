@@ -17,10 +17,10 @@
 			<tr>
 				<td align ="center" >รหัสนักศึกษา</td>
 				<td align ="center" >ชื่อนักศึกษา</td>
-				<td align ="center" >อีเมลล์</td>
+				<td align ="center" >อีเมล</td>
 				<td align ="center" >รหัสคณะที่สังกัด</td>
 				<td align ="center" >ผู้ใช้งาน</td>
-				<td align ="center" colspan=2>Operations</td>
+				<td align ="center" colspan=2>เครื่องมือ</td>
 			</tr>
 			@foreach($student as $std)
 			<tr>

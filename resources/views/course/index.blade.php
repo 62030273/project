@@ -18,7 +18,7 @@
 				<td align ="center" >รหัสวิชา</td>
 				<td align ="center" >ชื่อวิชา</td>
 				<td align ="center" >สถานะรายวิชา</td>
-				<td align ="center" colspan=2>Operations</td>
+				<td align ="center" colspan=2>เครื่องมือ</td>
 			</tr>
 			@foreach($course as $crs)
 			<tr>

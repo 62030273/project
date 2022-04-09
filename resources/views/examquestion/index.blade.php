@@ -23,7 +23,7 @@
 				<td align ="center" >วันที่และเวลา</td>
 				<td align ="center" >เลขที่คำตอบ</td>
 				<td align ="center" >คะแนน</td>
-				<td align ="center" colspan=2>จัดการ</td>
+				<td align ="center" colspan=2>เครื่องมือ</td>
 			</tr>
 			@foreach($examquestion as $eq)
 			<tr>

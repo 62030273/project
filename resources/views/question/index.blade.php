@@ -25,7 +25,7 @@
 
 				<td align ="center" >คำถามของอาจารย์</td>
 				<td align ="center" >เวลาที่ตั้งคำถาม</td>
-				<td align ="center" colspan=2>Operations</td>
+				<td align ="center" colspan=2>เครื่องมือ</td>
 			</tr>
 			@foreach($question as $qui)
 			<tr>

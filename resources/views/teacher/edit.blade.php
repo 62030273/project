@@ -47,7 +47,7 @@
             </div>
 
             <div class="form-group">
-                <strong>อีเมลล์</strong>
+                <strong>อีเมล</strong>
                 <input type="text"   value="{{ $tea->tch_email}}"name="tch_email" class="form-control" placeholder="อีเมลล์">
             </div>
             <div class="form-group">

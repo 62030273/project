@@ -19,7 +19,7 @@
 				<td align ="center" >รหัสตัวเลือก</td>
 				<td align ="center" >เลขที่ตัวเลือก</td>
 				<td align ="center" >อธิบายตัวเลือก</td>
-				<td align ="center" colspan=2>Operations</td>
+				<td align ="center" colspan=2>เครื่องมือ</td>
 			</tr>
 			@foreach($choice as $cho)
 			<tr>

@@ -17,7 +17,7 @@
 			<tr>
 				<td align ="center" >รหัสคณะ</td>
 				<td align ="center" >ชื่อคณะ</td>
-				<td align ="center" colspan=2>Operations</td>
+				<td align ="center" colspan=2>เครื่องมือ</td>
 
 			</tr>
 			@foreach($faculty as $fac)

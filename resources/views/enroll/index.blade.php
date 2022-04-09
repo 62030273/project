@@ -22,7 +22,7 @@
 				<td align ="center">เลขที่</td>
 				<!-- เลขที่รึเปล่านะ -->
 				<td align ="center">ชื่อนักศึกษา</td>
-				<td align ="center" colspan=2>จัดการ</td>
+				<td align ="center" colspan=2>เครื่องมือ</td>
 			</tr>
 			@foreach($enroll as $enr)
 			<tr>

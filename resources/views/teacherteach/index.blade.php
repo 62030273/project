@@ -20,7 +20,7 @@
 				<td align ="center" >รายวิชา</td>
 				<td align ="center" >กลุ่ม</td>
 				<td align ="center" >อาจารย์</td>
-				<td align ="center" colspan=2>Operations</td>
+				<td align ="center" colspan=2>เครื่องมือ</td>
 			</tr>
 			@foreach($teacherteach as $teat)
 			<tr>

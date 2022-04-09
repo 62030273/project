@@ -19,7 +19,7 @@
 				<td align ="center">เทอม</td>
 				<td align ="center">รายวิชา</td>
 				<td align ="center">จำนวนการสอบ</td>
-				<td align ="center" colspan=2>Operations</td>
+				<td align ="center" colspan=2>เครื่องมือ</td>
 			</tr>
 			@foreach($course_config as $ccf)
 			<tr>

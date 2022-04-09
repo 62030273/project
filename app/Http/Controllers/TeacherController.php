@@ -124,12 +124,12 @@ class TeacherController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($tch_code)
     {
         DB::table('teacher')
-        ->where('tch_code','=',$id)
+        ->where('tch_code','=',$tch_code)
         // ->where('tch_name','=',$id)
-        ->where('tch_user_login','=',$id)
+        //->where('tch_user_login','=',$id)
         ->delete();
         
         return redirect('teacher');

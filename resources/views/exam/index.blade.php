@@ -26,7 +26,7 @@
 				<td align ="center">วันที่หมดเวลาทำข้อสอบ</td>
 				<td align ="center">คะแนนรวม</td>
 				<td align ="center">วิธีการส่ง</td>
-				<td align ="center" colspan=2>จัดการ</td>
+				<td align ="center" colspan=2>เครื่องมือ</td>
 			</tr>
 			@foreach($exam as $ex)
 			<tr>

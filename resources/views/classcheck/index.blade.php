@@ -26,7 +26,7 @@
 				<td align ="center" >เวลาในการทำข้อสอบ</td>
 
 				<td align ="center" >รหัสอาจารย์</td>
-				<td align ="center" colspan=2>Operations</td>
+				<td align ="center" colspan=2>เครื่องมือ</td>
 			</tr>
 			@foreach($classcheck as $clak)
 			<tr>

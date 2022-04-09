@@ -25,7 +25,7 @@
 				<td align ="center">สถานะ</td>
 				<td align ="center">วันที่เริ่มทำข้อสอบ</td>
 				<td align ="center">วันที่หมดเวลาทำข้อสอบ</td>
-				<td align ="center" colspan=2>Operations</td>
+				<td align ="center" colspan=2>เครื่องมือ</td>
 			</tr>
 			@foreach($exam_control as $exc)
 			<tr>
