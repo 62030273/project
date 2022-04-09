@@ -3,7 +3,7 @@
 <div class="row">
 	<div class="col-lg-12 margin-tb">
 		<div class="pull-left">
-			<h2>Show Course Config  | | <a href="http://dekwat.buu.in.th:15110/statuswork" > STATUS </a></h2>
+			<h2>แสดง การกำหนดค่าหลักสูตร  | | <a href="http://dekwat.buu.in.th:15110/statuswork" > STATUS </a></h2>
             <div class="card-header">
 				<a class="btn btn-primary" 
                     href="{{ route('course_config.create') }}">Insert</a>
