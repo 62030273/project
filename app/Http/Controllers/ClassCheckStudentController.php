@@ -107,11 +107,11 @@ class ClassCheckStudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($ccs_cc_id,$ccs_std_code)
     {
         DB::table('class_check_student')
-        ->where('ccs_cc_id','=',$id)
-        ->where('ccs_std_code','=',$id)
+        ->where('ccs_cc_id','=',$ccs_cc_id)
+        ->where('ccs_std_code','=',$ccs_std_code)
         ->delete();
         
         return redirect('class_check_student');

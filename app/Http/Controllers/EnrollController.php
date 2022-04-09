@@ -85,15 +85,9 @@ class EnrollController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($enr_std_code, $enr_crs_code)
+    public function edit($id)
     {
-        $enroll = DB::table('enroll')
-                    // ->join('course', 'enroll.enr_crs_code', '=', 'course.crs_code')
-                    // ->join('student', 'enroll.enr_std_code', '=', 'student.std_code')
-                    ->where('enr_std_code','=',$enr_std_code)
-                    ->where('enr_crs_code','=',$enr_crs_code)
-                    // ->where('enr_std_code','=',$id)
-                    ->get ();
+        $enroll = DB::table('enroll')->where('enr_std_code','=',$id)->get ();
         return view('enroll.edit', compact('enroll'));
     }
 

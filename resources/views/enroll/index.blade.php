@@ -34,7 +34,7 @@
 				<td align ="center">{{ $enr->std_name }}</td>
 				<td align ="center">
 					<form action="{{ route('enroll.destroy',['enr_std_code'=>$enr->enr_std_code,'enr_crs_code'=>$enr->enr_crs_code] ) }}" method="POST" >
-						<a class="btn btn-primary" href="{{ route('enroll.edit',['enr_std_code'=>$enr->enr_std_code,'enr_crs_code'=>$enr->enr_crs_code] ) }}"> Edit</a>
+						<a class="btn btn-primary" href="{{ route('enroll.edit',$enr->enr_std_code) }}"> Edit</a>
 						@csrf
 						@method('DELETE')
 						<button type="submit" class="btn btn-danger">Delete</button>
