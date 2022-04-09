@@ -13,11 +13,7 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        $question =  DB::table('question')
-        ->join('course', 'question.qs_crs_code', '=', 'course.crs_code')
-        ->join('teacher', 'question.qs_tch_code', '=', 'teacher.tch_code')
-        ->orderby('question.qs_id', 'desc')
-        ->get();
+        $question =  DB::table('question')->get();
 
         return view('question.index',compact('question'));
     }
@@ -29,12 +25,7 @@ class QuestionController extends Controller
      */
     public function create()
     {
-        $course = DB::table('course')
-                    ->where('crs_active', '=', 'Y')
-                    ->get();
-        $teacher = DB::table('teacher')->get();
-
-        return view('question.create' ,compact('course','teacher'));
+        return view('question.create');
     }
 
     /**
@@ -55,7 +46,8 @@ class QuestionController extends Controller
             'qs_tch_code'=>'required',
             'qs_ex_date'=>'required'
         ]);
-
+    DB::beginTransaction();
+    try {
         DB::table('question')->insert(
         [
             'qs_id' => $request->qs_id, 
@@ -66,10 +58,13 @@ class QuestionController extends Controller
             'qs_crs_code'=> $request->qs_crs_code,
             'qs_tch_code' => $request->qs_tch_code,
             'qs_ex_date'=> $request->qs_ex_date
-        
-        ]
-        );
-
+        ]);
+        DB::select('call CreateQuestiontwo(?,?,?,?,?)',[$request->qs_id,$request->ch_no1,$request->ch_no2,$request->ch_no3,$request->ch_no4]);
+        } catch(ValidationException $e)
+        {
+            DB::rollback();
+        }
+        DB::commit();
         return redirect('question');
     }
 
@@ -143,6 +138,7 @@ class QuestionController extends Controller
     {
         DB::table('question')
         ->where('qs_id','=',$id)
+       
         ->delete();
         
         return redirect('question');

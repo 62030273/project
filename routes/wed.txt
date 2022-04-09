@@ -1,3 +1,40 @@
+DELIMITER $$
+
+CREATE PROCEDURE Question_CH(INOUT ch_1 TEXT, INOUT ch_2 TEXT, INOUT ch_3 TEXT, INOUT ch_4 TEXT, INOUT ch_qs_id INT(11))
+    NO SQL
+BEGIN
+	DECLARE ch_no_1 TEXT;
+    DECLARE ch_no_2 TEXT;
+    DECLARE ch_no_3 TEXT;
+    DECLARE ch_no_4  TEXT;
+     DECLARE ch_qs_id  TEXT;
+     
+    SET  ch_qs_id =ch_qs_id;
+    SET  ch_no_1 =ch_1;
+    SET  ch_no_2 =ch_2;
+     SET  ch_no_3 =ch_3;
+     SET  ch_no_4 =ch_4;
+   INSERT INTO choice  (created_at, ch_qs_id, ch_no, ch_desc) 
+   VALUES
+   (CURRENT_TIMESTAMP, ch_qs_id, '1', ch_no_1) ,
+    (CURRENT_TIMESTAMP, ch_qs_id, '2', ch_no_2) ,
+     (CURRENT_TIMESTAMP, ch_qs_id, '3', ch_no_3) ,
+      (CURRENT_TIMESTAMP, ch_qs_id, '4', ch_no_4) ;
+    
+END$$
+DELIMITER ;
+
+
+
+
+
+
+
+
+
+
+
+
 <?php
 
 use Illuminate\Support\Facades\Route;

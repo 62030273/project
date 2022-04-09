@@ -15,9 +15,9 @@
 	<div class="col-lg-12 margin-tb">
         <table class="table table-bordered">
 			<tr>
-				<td align ="center" >รหัสคำถาม</td>
+				<td align ="center" >ข้อ</td>
 				<td align ="center" >คำถาม</td>
-				<td align ="center" >ตัวเลือกที่ถูก</td>
+				<td align ="center" >ข้อถูก</td>
 
 				<td align ="center" >เวลาในการทำ</td>
 				<td align ="center" >คะแนน</td>
@@ -32,12 +32,11 @@
 				<td align ="center">{{ $qui->qs_id }}</td>
 				<td align ="center" >{{ $qui->qs_question }}</td>
 				<td align ="center">{{ $qui->qs_ch_no_ans }}</td>
-
 				<td align ="center" >{{ $qui->qs_ex_time }}</td>
-				<td align ="center">{{ $qui->qs_score }}</td>
-				<td align ="center" >{{ $qui->crs_name }}</td>
 
-				<td align ="center">{{ $qui->tch_name }}</td>
+				<td align ="center">{{ $qui->qs_score }}</td>
+				<td align ="center" >{{ $qui->qs_crs_code }}</td>
+				<td align ="center">{{ $qui->qs_tch_code }}</td>
 				<td align ="center" >{{ $qui->qs_ex_date }}</td>
 				
 
