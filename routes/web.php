@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 route::resource('statuswork','App\Http\Controllers\STATUSController');
 route::resource('choice','App\Http\Controllers\ChoiceController');
+route::delete('choice.destroy/{ch_qs_id}/{ch_no}','App\Http\Controllers\ChoiceController@destroy')->name('choice.destroy');
 route::resource('class_check','App\Http\Controllers\ClassCheckController');
 route::resource('course_config','App\Http\Controllers\CourseConfigController');
 route::resource('class_check_student','App\Http\Controllers\ClassCheckStudentController');
