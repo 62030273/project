@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>แก้ไขข้อสอบ</h2>
+            <h2>แก้ไขการสอบ</h2>
         </div>
         <div class="pull-right">
             <a class="btn btn-primary" href="{{ route('exam.index') }}"> Back</a>
@@ -35,8 +35,8 @@
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>รหัส</strong>
-                <input type="text" readonly value="{{ $ex->ex_id}}" name="ex_id" class="form-control" placeholder="รหัส">
+                <strong>ลำดับ</strong>
+                <input type="text" readonly value="{{ $ex->ex_id}}" name="ex_id" class="form-control" placeholder="ลำดับ">
             </div>
             <div class="form-group">
                 <strong>ปีการศึกษา</strong>

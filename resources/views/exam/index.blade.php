@@ -3,7 +3,7 @@
 <div class="row">
 	<div class="col-lg-12 margin-tb">
 		<div class="pull-left">
-			<h2>ข้อสอบ  | | <a href="http://dekwat.buu.in.th:15110/statuswork" > STATUS </a></h2>
+			<h2>การสอบ  | | <a href="http://dekwat.buu.in.th:15110/statuswork" > STATUS </a></h2>
             <div class="card-header">
 				<a class="btn btn-primary" 
                     href="{{ route('exam.create') }}">Insert</a>
@@ -15,7 +15,7 @@
 	<div class="col-lg-12 margin-tb">
         <table class="table table-bordered">
 			<tr>
-				<td align ="center">รหัส</td>
+				<td align ="center">ลำดับ</td>
 				<td align ="center">ปี</td>
 				<td align ="center">เทอม</td>
 				<td align ="center">รหัสวิชา</td>

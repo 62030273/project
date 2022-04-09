@@ -35,8 +35,8 @@
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-                <strong>รหัสข้อสอบ</strong>
-                <input type="text" readonly  value="{{ $eq->eq_ex_id }}" name="eq_ex_id" class="form-control" placeholder="รหัสข้อสอบ">
+                <strong>ลำดับ</strong>
+                <input type="text" readonly  value="{{ $eq->eq_ex_id }}" name="eq_ex_id" class="form-control" placeholder="ลำดับ">
             </div>
 
             <div class="form-group">

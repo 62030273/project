@@ -39,21 +39,28 @@ class TeacherController extends Controller
         $request->validate([
             'tch_code'=>'required',
             'tch_name'=>'required',
-            'tch_email'=>'required',
-            'tch_fac_code'=>'required',
+            // 'tch_email'=>'required',
+            'tch_fac_code'=>'required' ,
             'tch_user_login'=>'required'
         ]);
-
+        DB::beginTransaction();
+        try {
         DB::table('teacher')->insert(
         [
             'tch_code' => $request->tch_code, 
             'tch_name' => $request->tch_name,
-            'tch_email'=> $request->tch_email,
+            // 'tch_email'=> $request->tch_email,
             'tch_fac_code' => $request->tch_fac_code,
             'tch_user_login'=> $request->tch_user_login
         ]
         );
+        DB::select('call GenerateTeacherEmail(?)',[$request->tch_code]);
+    }catch (ValidationException $e) {
+        DB::rollback();
+    }
+    DB::commit();
 
+    
         return redirect('teacher');
     }
 

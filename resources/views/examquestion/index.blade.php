@@ -15,7 +15,7 @@
 	<div class="col-lg-12 margin-tb">
         <table class="table table-bordered">
 			<tr>
-				<td align ="center" >รหัสข้อสอบ</td>
+				<td align ="center" >ลำดับ</td>
 				<td align ="center" >ลำดับข้อสอบและตัวเลือก</td>
 				<td align ="center" >รหัสคำถาม</td>
 				<td align ="center" >รหัสคำตอบ</td>

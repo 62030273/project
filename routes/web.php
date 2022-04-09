@@ -38,7 +38,7 @@ route::delete('course.destroy/{crs_code}/{crs_active}','App\Http\Controllers\Cou
 //enroll
 route::resource('enroll','App\Http\Controllers\EnrollController');
 route::delete('enroll.destroy/{enr_std_code}/{enr_crs_code}','App\Http\Controllers\EnrollController@destroy')->name('enroll.destroy');
-route::get('enroll.edit/{enr_std_code}/{enr_crs_code}','App\Http\Controllers\EnrollController@edit')->name('enroll.edit');
+//route::get('enroll.edit/{enr_std_code}/{enr_crs_code}','App\Http\Controllers\EnrollController@edit')->name('enroll.edit');
 //exam
 route::resource('exam','App\Http\Controllers\ExamController');
 route::delete('exam.destroy/{ex_id}/{ex_std_code}','App\Http\Controllers\ExamController@destroy')->name('exam.destroy');

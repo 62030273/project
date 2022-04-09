@@ -3,7 +3,7 @@
 <div class="row">
 	<div class="col-lg-12 margin-tb">
 		<div class="pull-left">
-			<h2>แสดงรายชื่อครูผู้สอน | | <a href="http://dekwat.buu.in.th:15110/statuswork" > STATUS </a></h2>
+			<h2>แสดงรายการสอนของอาจารย์ | | <a href="http://dekwat.buu.in.th:15110/statuswork" > STATUS </a></h2>
             <div class="card-header">
 				<a class="btn btn-primary" 
                     href="{{ route('teacher_teach.create') }}">Insert</a>
@@ -16,7 +16,7 @@
         <table class="table table-bordered">
 			<tr>
 				<td align ="center" >ปีการศึกษา</td>
-				<td align ="center" >เทอม</td>
+				<td align ="center" >ภาคเรียน</td>
 				<td align ="center" >รายวิชา</td>
 				<td align ="center" >กลุ่ม</td>
 				<td align ="center" >อาจารย์</td>

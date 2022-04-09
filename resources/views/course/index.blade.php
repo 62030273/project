@@ -3,7 +3,7 @@
 <div class="row">
 	<div class="col-lg-12 margin-tb">
 		<div class="pull-left">
-			<h2>Show Course  | | <a href="http://dekwat.buu.in.th:15110/statuswork" > STATUS </a></h2>
+			<h2>แสดงรายวิชา  | | <a href="http://dekwat.buu.in.th:15110/statuswork" > STATUS </a></h2>
             <div class="card-header">
 				<a class="btn btn-primary" 
                     href="{{ route('course.create') }}">Insert</a>
@@ -15,9 +15,9 @@
 	<div class="col-lg-12 margin-tb">
         <table class="table table-bordered">
 			<tr>
-				<td align ="center" >crs_code</td>
-				<td align ="center" >crs_name</td>
-				<td align ="center" >crs_active</td>
+				<td align ="center" >รหัสวิชา</td>
+				<td align ="center" >ชื่อวิชา</td>
+				<td align ="center" >สถานะรายวิชา</td>
 				<td align ="center" colspan=2>Operations</td>
 			</tr>
 			@foreach($course as $crs)
