@@ -131,11 +131,10 @@ class TeacherTeachController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($tt_crs_code)
     {
-        DB::table('teacher_teach')
-        ->where('tt_crs_code','=',$tt_crs_code)
-        ->delete();
+        DB::table('teacher_teach') ->where('tt_crs_code','=',$tt_crs_code)
+                                    ->delete();
         
         return redirect('teacher_teach');
     }

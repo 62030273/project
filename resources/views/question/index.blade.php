@@ -32,11 +32,12 @@
 				<td align ="center">{{ $qui->qs_id }}</td>
 				<td align ="center" >{{ $qui->qs_question }}</td>
 				<td align ="center">{{ $qui->qs_ch_no_ans }}</td>
-				<td align ="center" >{{ $qui->qs_ex_time }}</td>
 
+				<td align ="center" >{{ $qui->qs_ex_time }}</td>
 				<td align ="center">{{ $qui->qs_score }}</td>
-				<td align ="center" >{{ $qui->qs_crs_code }}</td>
-				<td align ="center">{{ $qui->qs_tch_code }}</td>
+				<td align ="center" >{{ $qui->crs_name }}</td>
+
+				<td align ="center">{{ $qui->tch_name }}</td>
 				<td align ="center" >{{ $qui->qs_ex_date }}</td>
 				
 

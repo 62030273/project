@@ -30,9 +30,8 @@
 				<td align ="center" >{{ $teat->tt_sect }}</td>
 				<td align ="center">{{ $teat->tch_name }}</td>
 				<td align ="center" >
-				<!-- ['crs_name'=>$teat->tt_crs_code,'tch_name'=>$teat->tt_tch_code] -->
-					<form action="{{ route('teacher_teach.destroy',['crs_name'=>$teat->crs_name,'tch_name'=>$teat->tch_name]) }}" method="POST" >
-						<a class="btn btn-primary" href="{{ route('teacher_teach.edit',['crs_name'=>$teat->crs_name,'tch_name'=>$teat->tch_name]) }}"> Edit</a>
+					<form action="{{ route('teacher_teach.destroy',['tt_crs_code'=>$teat->tt_crs_code]) }}" method="POST" >
+						<a class="btn btn-primary" href="{{ route('teacher_teach.edit',$teat->tt_crs_code) }}"> Edit</a>
 						@csrf
 						@method('DELETE')
 						<button type="submit" class="btn btn-danger">Delete </button>

@@ -35,12 +35,28 @@
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>รหัสวิชาที่แก้ไข</strong>
-                <input type="text" readonly value="{{$ccf->ccf_crs_code }}" name="ccf_crs_code" class="form-control" placeholder="{{ $ccf->crs_name }}">
+                <strong>รหัสวิชาที่แก้ไข</strong> <br>
+                <input type="text" readonly value="{{ $ccf->ccf_crs_code }}" name="ccf_crs_code" class="form-control" placeholder="{{ $ccf->crs_name }}"> 
+                <select class="form-control" id="ccf_crs_code" name="ccf_crs_code" require>
+                    <option value="{{ $ccf->ccf_crs_code }}">{{ $ccf->crs_name }}</option>
+                </select>
             </div>
             <div class="form-group">
                 <strong>ปีที่แก้ไขรายวิชา</strong>
-                <input type="text" value="{{ $ccf->ccf_year}}" name="ccf_year" class="form-control" min="2555" max="2575" placeholder="ปีที่แก้ไขรายวิชา (2555 - 2575)" >
+                <!-- <input type="text" value="{{ $ccf->ccf_year}}" name="ccf_year" class="form-control" min="2555" max="2575" placeholder="ปีที่แก้ไขรายวิชา (2555 - 2575)" > -->
+                <select class="form-control" id="ccf_year" name="ccf_year" require>
+                    <option value="2565">2565</option>
+                    <option value="2566">2566</option>
+                    <option value="2567">2567</option>
+                    <option value="2568">2568</option>
+                    <option value="2569">2569</option>
+                    <option value="2570">2570</option>
+                    <option value="2571">2571</option>
+                    <option value="2572">2572</option>
+                    <option value="2573">2573</option>
+                    <option value="2574">2574</option>
+                    <option value="2575">2575</option>
+                </select>
             </div>
 
             <div class="form-group">

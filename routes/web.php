@@ -39,7 +39,7 @@ route::delete('question.destroy/{qs_id}','App\Http\Controllers\QuestionControlle
 route::resource('student','App\Http\Controllers\StudentController');
 route::resource('teacher','App\Http\Controllers\TeacherController');
 route::resource('teacher_teach','App\Http\Controllers\TeacherTeachController'); 
-route::delete('teacher_teach.destroy/{tt_crs_code}/{tt_tch_code}','App\Http\Controllers\TeacherTeachController@destroy')->name('teacher_teach.destroy');
+route::delete('teacher_teach.destroy/{tt_crs_code}','App\Http\Controllers\TeacherTeachController@destroy')->name('teacher_teach.destroy');
 
 
 Route::get('/', function () {
