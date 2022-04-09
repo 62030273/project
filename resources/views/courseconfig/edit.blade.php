@@ -44,7 +44,7 @@
             <div class="form-group">
                 <strong>ปีที่แก้ไขรายวิชา</strong>
                 <!-- <input type="text" value="{{ $ccf->ccf_year}}" name="ccf_year" class="form-control" min="2555" max="2575" placeholder="ปีที่แก้ไขรายวิชา (2555 - 2575)" > -->
-                <select class="form-control" id="ccf_year" name="ccf_year" require>
+                <select class="form-control" id="ccf_year" name="ccf_year" require placeholder="ปีที่แก้ไขรายวิชา (2555 - 2575)">
                     <option value="2565">2565</option>
                     <option value="2566">2566</option>
                     <option value="2567">2567</option>

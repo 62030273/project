@@ -3,7 +3,7 @@
 <div class="row">
 	<div class="col-lg-12 margin-tb">
 		<div class="pull-left">
-			<h2>Show TeacherTeach | | <a href="http://dekwat.buu.in.th:15110/statuswork" > STATUS </a></h2>
+			<h2>แสดงรายชื่อครูผู้สอน | | <a href="http://dekwat.buu.in.th:15110/statuswork" > STATUS </a></h2>
             <div class="card-header">
 				<a class="btn btn-primary" 
                     href="{{ route('teacher_teach.create') }}">Insert</a>
