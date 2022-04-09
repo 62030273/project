@@ -19,14 +19,14 @@ route::delete('choice.destroy/{ch_qs_id}/{ch_no}','App\Http\Controllers\ChoiceCo
 route::resource('class_check','App\Http\Controllers\ClassCheckController');
 route::delete('class_check.destroy/{cc_id}','App\Http\Controllers\ClassCheckController@destroy')->name('class_check.destroy');
 route::resource('course_config','App\Http\Controllers\CourseConfigController');
-route::delete('course_config.destroy/{ccf_crs_code}','App\Http\Controllers\CourseConfigController@destroy')->name('course_config.destroy');
+route::delete('course_config.destroy/{ccf_year}/{ccf_term}/{ccf_crs_code}','App\Http\Controllers\CourseConfigController@destroy')->name('course_config.destroy');
 route::resource('class_check_student','App\Http\Controllers\ClassCheckStudentController');
 route::delete('class_check_student.destroy/{ccs_cc_id}/{ccs_std_code}','App\Http\Controllers\ClassCheckStudentController@destroy')->name('classcheckstudent.destroy');
 route::resource('elle','App\Http\Controllers\StatusQuiz3Controller');
 route::resource('quiz3','App\Http\Controllers\Quiz3Controller');
 route::resource('course','App\Http\Controllers\CourseController');
 route::resource('enroll','App\Http\Controllers\EnrollController');
-route::delete('enroll.destroy/{enr_sect}/{enr_seq}','App\Http\Controllers\EnrollController@destroy')->name('enroll.destroy');
+route::delete('enroll.destroy/{enr_std_code}/{enr_crs_code}','App\Http\Controllers\EnrollController@destroy')->name('enroll.destroy');
 route::resource('exam','App\Http\Controllers\ExamController');
 route::delete('exam.destroy/{ex_id}/{ex_std_code}','App\Http\Controllers\ExamController@destroy')->name('exam.destroy');
 route::resource('exam_control','App\Http\Controllers\ExamControlController');
