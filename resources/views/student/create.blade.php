@@ -38,10 +38,10 @@
                 <input type="text" name="std_name" class="form-control" placeholder="vaChar(45)">
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <strong>std_email</strong>
                 <input type="text" name="std_email" class="form-control" placeholder="vaChar(45)">
-            </div>
+            </div> -->
             <div class="form-group">
                 <strong>std_fac_code</strong>
                 <input type="text" name="std_fac_code" class="form-control" placeholder="vaChar(3)">

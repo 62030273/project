@@ -90,16 +90,33 @@ body {
     </head>
     <body class="antialiased">
                     <div class="navbar">
-                <a href="#home">Home</a>
-                <a href="#news">News</a>
+                <a href="#home">หน้าหลัก</a>
+                
+                    <div class="dropdown">
+                        <button class="dropbtn">นักเรียน 
+                                <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                                <a href="/student">ข้อมูลนักเรียน</a>
+                                <a href="/faculty">คณะ</a>
+                                <a href="/course">รายวิชา</a>
+                                <a href="/enroll">ลงทะเบียนรายวิชา</a>
+                                <a href="/class_check_student">รายชื่อนักเรียนในชั้นเรียน</a>
+                                
+                    </div>
+                    </div> 
+                
                         <div class="dropdown">
-                            <button class="dropbtn">Dropdown 
+                            <button class="dropbtn">อาจารย์ 
                                     <i class="fa fa-caret-down"></i>
                             </button>
                             <div class="dropdown-content">
-                                    <a href="#">Link 1</a>
-                                    <a href="#">Link 2</a>
-                                    <a href="#">Link 3</a>
+                            <a href="/teacher">ข้อมูลอาจารย์ </a>
+                                <a href="/faculty">คณะ</a>
+                                <a href="/course">รายวิชา</a>
+                                <a href="/exam">ข้อสอบ</a>
+                                <a href="/question">คำถาม</a>
+                                <a href="/choice">ตัวเลือกคำตอบ</a>
                             </div>
                         </div> 
                 </div>

@@ -39,7 +39,7 @@ class StudentController extends Controller
         $request->validate([
             'std_code'=>'required',
             'std_name'=>'required',
-            'std_email'=>'required',
+            // 'std_email'=>'required',
             'std_fac_code'=>'required',
             'std_user_login'=>'required'
         ]);
@@ -48,7 +48,7 @@ class StudentController extends Controller
         [
             'std_code' => $request->std_code, 
             'std_name' => $request->std_name,
-            'std_email'=> $request->std_email,
+            // 'std_email'=> $request->std_email,
             'std_fac_code' => $request->std_fac_code,
             'std_user_login'=> $request->std_user_login
         ]
