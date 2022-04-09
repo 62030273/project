@@ -1,7 +1,7 @@
 DELIMITER $$
-DROP PROCEDURE IF EXISTS CountOrderByStudent $$
+DROP PROCEDURE IF EXISTS CountStudentByFaculty $$
 
-CREATE PROCEDURE CountOrderByStudent
+CREATE PROCEDURE CountStudentByFaculty
 (IN sumstd VARCHAR(30), OUT Total INT)
 
 BEGIN
