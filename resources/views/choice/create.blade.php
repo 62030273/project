@@ -30,7 +30,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>รหัสตัวเลือก</strong>
-                <input type="text" name="ch_qs_id" class="form-control" placeholder="รหัสตัวเลือก (INT)">
+                 <input type="text" name="ch_qs_id" class="form-control" placeholder="รหัสตัวเลือก (INT)"> 
             </div>
 
             <div class="form-group">
