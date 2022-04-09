@@ -21,10 +21,10 @@
 
 				<td align ="center" >เวลาในการทำ</td>
 				<td align ="center" >คะแนน</td>
-				<td align ="center" >คำถามของรายวิชา</td>
+				<td align ="center" >รหัสรายวิชา</td>
 
-				<td align ="center" >คำถามของอาจารย์</td>
-				<td align ="center" >เวลาที่ตั้งคำถาม</td>
+				<td align ="center" >รหัสของอาจารย์</td>
+				<td align ="center" >วันที่ทำข้อสอบ</td>
 				<td align ="center" colspan=2>เครื่องมือ</td>
 			</tr>
 			@foreach($question as $qui)

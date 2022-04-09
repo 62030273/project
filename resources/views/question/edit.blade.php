@@ -62,16 +62,16 @@
             </div>
 
             <div class="form-group">
-                <strong>คำถามของรายวิชา</strong>
+                <strong>รหัสรายวิชา</strong>
                 <input type="text"   value="{{ $qui->qs_crs_code}}"name="qs_crs_code" class="form-control" placeholder="vaChar(10)">
             </div>
             <div class="form-group">
-                <strong>คำถามของอาจารย์</strong>
+                <strong>รหัสของอาจารย์</strong>
                 <input type="text"   value="{{ $qui->qs_tch_code}}"name="qs_tch_code" class="form-control" placeholder="vaChar(20)">
             </div>
 
             <div class="form-group">
-                <strong>เวลาที่ตั้งคำถาม</strong>
+                <strong>วันที่ทำข้อสอบ</strong>
                 <input type="date"   value="{{ $qui->qs_ex_date}}" name="qs_ex_date" class="form-control" placeholder=" date">
             </div>
         

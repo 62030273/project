@@ -62,7 +62,7 @@
             </div>
 
             <div class="form-group">
-                <strong>คำถามของรายวิชา</strong>
+                <strong>รหัสรายวิชา</strong>
                 <select class="form-control" id="qs_crs_code" name="qs_crs_code" require>
                 @foreach ($course as $crs)
                     <option value="{{ $crs->crs_code}}">{{ $crs->crs_code }}&nbsp;//&nbsp;{{ $crs->crs_name }}</option>
@@ -71,7 +71,7 @@
             <!-- <input type="text"   name="qs_crs_code" class="form-control" placeholder="vaChar(10)"> -->
             </div>
             <div class="form-group">
-                <strong>คำถามของอาจารย์</strong>
+                <strong>รหัสของอาจารย์</strong>
                 <select class="form-control" id="qs_tch_code" name="qs_tch_code" require>
                 @foreach ($teacher as $tch)
                     <option value="{{ $tch->tch_code}}">{{ $tch->tch_code }}&nbsp;//&nbsp;{{ $tch->tch_name }}</option>
@@ -81,7 +81,7 @@
             </div>
 
             <div class="form-group">
-                <strong>เวลาที่ตั้งคำถาม</strong>
+                <strong>วันที่ทำข้อสอบ</strong>
                 <input type="date"    name="qs_ex_date" class="form-control" placeholder=" ">
             </div>
         
