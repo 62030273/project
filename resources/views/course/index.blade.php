@@ -27,7 +27,7 @@
 				<td >{{ $crs->crs_active }}</td>
 
 				<td align ="center" >
-					<form action="{{ route('course.destroy',$crs->crs_code, $crs->crs_name) }}" method="POST" >
+					<form action="{{ route('course.destroy',['crs_code'=>$crs->crs_code,'crs_active'=>$crs->crs_active]) }}" method="POST" >
 						<a class="btn btn-primary" href="{{ route('course.edit',$crs->crs_code, $crs->crs_name) }}"> Edit</a>
 						@csrf
 						@method('DELETE')
