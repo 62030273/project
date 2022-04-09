@@ -35,17 +35,17 @@
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-                <strong>รหัสพนักงาน</strong>
+                <strong>ข้อที่</strong>
                 <input type="text" readonly  value="{{ $cho->ch_qs_id}}" name="ch_qs_id" class="form-control" placeholder="รหัสตัวเลือก">
             </div>
 
             <div class="form-group">
-                <strong>ชื่อ</strong>
+                <strong>ตัวเลือก</strong>
                 <input type="text" value="{{ $cho->ch_no }}" name="ch_no" class="form-control" placeholder="เลขที่ตัวเลือก">
             </div>
 
             <div class="form-group">
-                <strong>นามสกุล</strong>
+                <strong>ตัวเลือกข้อสอบ</strong>
                 <input type="text" value="{{$cho->ch_desc }}" name="ch_desc" class="form-control" placeholder="อธิบายตัวเลือก">
             </div>
 

@@ -3,7 +3,7 @@
 <div class="row">
 	<div class="col-lg-12 margin-tb">
 		<div class="pull-left">
-			<h2>Show Enroll  | | <a href="http://dekwat.buu.in.th:15110/statuswork" > STATUS </a></h2>
+			<h2>แสดงการลงทะเบียน  | | <a href="http://dekwat.buu.in.th:15110/statuswork" > STATUS </a></h2>
             <div class="card-header">
 				<a class="btn btn-primary" 
                     href="{{ route('enroll.create') }}">Insert</a>
@@ -22,7 +22,7 @@
 				<td align ="center">เลขที่</td>
 				<!-- เลขที่รึเปล่านะ -->
 				<td align ="center">ชื่อนักศึกษา</td>
-				<td align ="center" colspan=2>Operations</td>
+				<td align ="center" colspan=2>จัดการ</td>
 			</tr>
 			@foreach($enroll as $enr)
 			<tr>

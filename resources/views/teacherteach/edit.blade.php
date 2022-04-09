@@ -35,7 +35,26 @@
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
        
-
+            <div class="form-group">
+                <strong>รหัสอาจารย์</strong>
+                <!-- <input type="text" readonly  value="{{ $teat->tt_tch_code}}" name="tt_tch_code" class="form-control" placeholder="Char(20)"> -->
+                <select class="form-control" id="tt_tch_code" name="tt_tch_code" require readonly >
+                    <option value="{{ $teat->tch_name }}">{{ $teat->tt_tch_code}} // {{ $teat->tch_name }}</option>
+                </select>
+            
+            </div>
+            <div class="form-group">
+                <strong>รหัสรายวิชา</strong>
+                <!-- <input type="text" readonly  value="{{ $teat->tt_crs_code}}"name="tt_crs_code" class="form-control" placeholder="vaChar(10)"> -->
+                <select class="form-control" id="tt_crs_code" name="tt_crs_code" require readonly >
+                    <option value="{{ $teat->tt_crs_code }}">{{ $teat->tt_crs_code}} // {{ $teat->crs_name }}</option>
+                </select>
+           
+            </div>
+            <div class="form-group">
+                <strong>กลุ่ม</strong>
+                <input type="text"   value="{{ $teat->tt_sect}}"name="tt_sect" class="form-control" placeholder="vaChar(4)">
+            </div>
             <div class="form-group">
                 <strong>ปีการศึกษา</strong>
                 <input type="text"   value="{{ $teat->tt_year}}"name="tt_year" class="form-control" placeholder="Char(4)">
@@ -46,19 +65,10 @@
                 <input type="text"   value="{{ $teat->tt_term}}"name="tt_term" class="form-control" placeholder="Char(1)">
             </div>
 
-            <div class="form-group">
-                <strong>รหัสรายวิชา</strong>
-                <input type="text" readonly  value="{{ $teat->tt_crs_code}}"name="tt_crs_code" class="form-control" placeholder="vaChar(10)">
-            </div>
-            <div class="form-group">
-                <strong>กลุ่ม</strong>
-                <input type="text"   value="{{ $teat->tt_sect}}"name="tt_sect" class="form-control" placeholder="vaChar(4)">
-            </div>
+            
+            
 
-            <div class="form-group">
-                <strong>รหัสอาจารย์</strong>
-                <input type="text" readonly  value="{{ $teat->tt_tch_code}}" name="tt_tch_code" class="form-control" placeholder="Char(20)">
-            </div>
+           
 
         
            

@@ -36,9 +36,9 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>รหัสวิชาที่แก้ไข</strong> <br>
-                <input type="text" readonly value="{{ $ccf->ccf_crs_code }}" name="ccf_crs_code" class="form-control" placeholder="{{ $ccf->crs_name }}"> 
-                <select class="form-control" id="ccf_crs_code" name="ccf_crs_code" require>
-                    <option value="{{ $ccf->ccf_crs_code }}">{{ $ccf->crs_name }}</option>
+                <!-- <input type="text" readonly value="{{ $ccf->ccf_crs_code }}" name="ccf_crs_code" class="form-control" placeholder="{{ $ccf->crs_name }}">  -->
+                <select class="form-control" id="ccf_crs_code" name="ccf_crs_code" require  readonly>
+                    <option readonly value="{{ $ccf->ccf_crs_code }}">{{ $ccf->crs_name }}</option>
                 </select>
             </div>
             <div class="form-group">
