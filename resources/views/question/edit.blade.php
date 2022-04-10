@@ -44,50 +44,54 @@
                 <input type="text"   value="{{ $qui->qs_question}}"name="qs_question" class="form-control" placeholder="text">
             </div>
             <!--  ---------------------------------------------------------------------------------------------- -->
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <strong>ชอยส์ที่ 1</strong>
-                <input type="text" name="ch_no1" class="form-control" placeholder="ตัวเลือกที่ 1">
+                <input type="text" name="ch_no1" class="form-control" value="{{ $qui->ch_desc }}">
             </div>
             <div class="form-group">
                 <strong>ชอยส์ที่ 2</strong>
-                <input type="text" name="ch_no2" class="form-control" placeholder="ตัวเลือกที่ 2">
+                <input type="text" name="ch_no2" class="form-control" value="{{ $qui->ch_desc }}">
             </div>
             <div class="form-group">
                 <strong>ชอยส์ที่ 3</strong>
-                <input type="text" name="ch_no3" class="form-control" placeholder="ตัวเลือกที่ 3">
+                <input type="text" name="ch_no3" class="form-control" value="{{ $qui->ch_desc }}">
             </div>
             <div class="form-group">
                 <strong>ชอยส์ที่ 4</strong>
-                <input type="text" name="ch_no4" class="form-control" placeholder="ตัวเลือกที่ 4">
-            </div>
+                <input type="text" name="ch_no4" class="form-control" value="{{ $qui->ch_desc }}">
+            </div> -->
+            @foreach($question as $qui)
+                <strong>ชอยส์ที่ {!! $qui->ch_no !!}</strong>
+                <input type="text" class="form-control" name = "choice{$qui->ch_no}" value="{!! $qui->ch_desc !!}"></input><br>
+            @endforeach
 <!--  ---------------------------------------------------------------------------------------------- -->
             <div class="form-group">
                 <strong>ตัวเลือกที่ถูก</strong>
-                <input type="text"   value="{{ $qui->qs_ch_no_ans}}"name="qs_ch_no_ans" class="form-control" placeholder="int">
+                <input type="text" value="{{ $qui->qs_ch_no_ans}}"name="qs_ch_no_ans" class="form-control">
             </div>
             <div class="form-group">
                 <strong>เวลาในการทำ</strong>
-                <input type="time"   value="{{ $qui->qs_ex_time}}"name="qs_ex_time" class="form-control" placeholder="int">
+                <input type="number"   value="{{ $qui->qs_ex_time}}"name="qs_ex_time" class="form-control">
                 <!-- ใน php เราเป็น int(11) เป็น vachar ของ qs_ex_time -->
             </div>
 
             <div class="form-group">
                 <strong>คะแนน</strong>
-                <input type="text"   value="{{ $qui->qs_score}}" name="qs_score" class="form-control" placeholder="int">
+                <input type="number" value="{{ $qui->qs_score}}" name="qs_score" class="form-control">
             </div>
 
             <div class="form-group">
-                <strong>รหัสรายวิชา</strong>
-                <input type="text"   value="{{ $qui->qs_crs_code}}"name="qs_crs_code" class="form-control" placeholder="vaChar(10)">
+                <strong>วิชา</strong>
+                <input type="text" readonly value="{{ $qui->crs_name}}"name="qs_crs_code" class="form-control">
             </div>
             <div class="form-group">
-                <strong>รหัสของอาจารย์</strong>
-                <input type="text"   value="{{ $qui->qs_tch_code}}"name="qs_tch_code" class="form-control" placeholder="vaChar(20)">
+                <strong>อาจารย์</strong>
+                <input type="text" readonly value="{{ $qui->tch_name}}"name="qs_tch_code" class="form-control">
             </div>
 
             <div class="form-group">
                 <strong>วันที่ทำข้อสอบ</strong>
-                <input type="date"   value="{{ $qui->qs_ex_date}}" name="qs_ex_date" class="form-control" placeholder=" date">
+                <input type="date" value="{{ $qui->qs_ex_date}}" name="qs_ex_date" class="form-control" placeholder=" date">
             </div>
         
            

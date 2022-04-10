@@ -25,7 +25,11 @@ class QuestionController extends Controller
      */
     public function create()
     {
-        return view('question.create');
+        $question = DB::table('question')
+                    ->join('course','question.qs_crs_code','=','course.crs_code')  
+                    ->join('teacher','question.qs_tch_code','=','teacher.tch_code')
+                    ->get();
+        return view('question.create',compact('question'));
     }
 
     /**
@@ -88,7 +92,11 @@ class QuestionController extends Controller
     public function edit($id)
     {
        
-        $question = DB::table('question')->where('qs_id','=',$id)->get ();
+        $question = DB::table('question')
+                    ->join('choice','question.qs_id','=','choice.ch_qs_id')
+                    ->join('course','question.qs_crs_code','=','course.crs_code')
+                    ->join('teacher','question.qs_tch_code','=','teacher.tch_code')
+                    ->where('qs_id','=',$id)->get ();
         return view('question.edit', compact('question'));
         
     }
@@ -125,7 +133,7 @@ class QuestionController extends Controller
             'qs_tch_code' => $request->qs_tch_code,
             'qs_ex_date'=> $request->qs_ex_date
         ]);
-        DB::select('call changechoice(?,?,?,?,?)',[$request->qs_id,$request->ch_no1,$request->ch_no2,$request->ch_no3,$request->ch_no4]);
+        DB::select('call EditChoice(?,?,?,?,?)',[$request->qs_id,$request->ch_no1,$request->ch_no2,$request->ch_no3,$request->ch_no4]);
         } catch(ValidationException $e)
         {
             DB::rollback();
@@ -155,11 +163,15 @@ class QuestionController extends Controller
      */
     public function destroy($id)
     {
-        DB::table('question')
-        ->where('qs_id','=',$id)
-       
-        ->delete();
-        
+        DB::beginTransaction();
+        try {
+        DB::table('question')->where('qs_id','=',$id)->delete();
+        DB::select('call DelQuestionChoice(?)',[$id]);
+        } catch(ValidationException $e)
+        {
+            DB::rollback();
+        }
+        DB::commit();
         return redirect('question');
     }
 }

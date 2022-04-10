@@ -30,57 +30,66 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
                 <strong>ข้อ</strong>
-                <input type="text" name="qs_id" class="form-control" placeholder="เลข">
+                <input type="text" name="qs_id" class="form-control" placeholder="ข้อ">
             </div>
 
             <div class="form-group">
                 <strong>คำถาม</strong>
-                <input type="text"   name="qs_question" class="form-control" placeholder="ข้อความ">
+                <input type="text"   name="qs_question" class="form-control" placeholder="คำถาม">
             </div>
 
             <div class="form-group">
                 <strong>ข้อถูก</strong>
-                <input type="text"  name="qs_ch_no_ans" class="form-control" placeholder="เลข">
+                <input type="text"  name="qs_ch_no_ans" class="form-control" placeholder="ข้อถูก">
             </div>
             <div class="form-group">
                 <strong>เวลาในการทำ</strong>
-                <input type="time"   name="qs_ex_time" class="form-control" placeholder="เลข">
+                <input type="number"   name="qs_ex_time" class="form-control" placeholder="เวลาในการทำ">
                 <!-- ใน php เราเป็น int(11) เป็น vachar ของ qs_ex_time -->
             </div>
 
             <div class="form-group">
                 <strong>คะแนน</strong>
-                <input type="text"    name="qs_score" class="form-control" placeholder="เลข">
+                <input type="text"    name="qs_score" class="form-control" placeholder="คะแนน">
             </div>
 
             <div class="form-group">
-                <strong>รหัสรายวิชา</strong>
-                <input type="text"   name="qs_crs_code" class="form-control" placeholder="รหัสรายวิชา">
+                <strong>วิชา</strong>
+                <select class="form-control" id="qs_crs_code" name="qs_crs_code" require>
+                    @foreach ($question as $qui)
+                    <option value="{{ $qui->crs_code}}">{{ $qui->crs_code }}&nbsp;//&nbsp;{{ $qui->crs_name }}</option>
+                    @endforeach
+                </select>
             </div>
+            
             <div class="form-group">
-                <strong>รหัสอาจารย์</strong>
-                <input type="text"   name="qs_tch_code" class="form-control" placeholder="รหัสอาจารย์">
+            <strong>อาจารย์</strong>
+            <select class="form-control" id="qs_tch_code" name="qs_tch_code" require>
+                    @foreach ($question as $qui)
+                    <option value="{{ $qui->tch_code}}">{{ $qui->tch_code }}&nbsp;//&nbsp;{{ $qui->tch_name }}</option>
+                    @endforeach
+                </select>
             </div>
 
             <div class="form-group">
                 <strong>วันที่ทำข้อสอบ</strong>
-                <input type="date"  name="qs_ex_date" class="form-control" placeholder=" ">
+                <input type="date"  name="qs_ex_date" class="form-control">
             </div>
 <!--  ---------------------------------------------------------------------------------------------- -->
             <div class="form-group">
-                <strong>ตัวเลือกที่ 1</strong>
+                <strong>ชอยส์ที่ 1</strong>
                 <input type="text" name="ch_no1" class="form-control" placeholder="ตัวเลือกที่ 1">
             </div>
             <div class="form-group">
-                <strong>ตัวเลือกที่ 2</strong>
+                <strong>ชอยส์ที่ 2</strong>
                 <input type="text" name="ch_no2" class="form-control" placeholder="ตัวเลือกที่ 2">
             </div>
             <div class="form-group">
-                <strong>ตัวเลือกที่ 3</strong>
+                <strong>ชอยส์ที่ 3</strong>
                 <input type="text" name="ch_no3" class="form-control" placeholder="ตัวเลือกที่ 3">
             </div>
             <div class="form-group">
-                <strong>ตัวเลือกที่ 4</strong>
+                <strong>ชอยส์ที่ 4</strong>
                 <input type="text" name="ch_no4" class="form-control" placeholder="ตัวเลือกที่ 4">
             </div>
 
