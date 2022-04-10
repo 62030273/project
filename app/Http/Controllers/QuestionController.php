@@ -112,8 +112,10 @@ class QuestionController extends Controller
             'qs_tch_code'=>'required',
             'qs_ex_date'=>'required'
         ]);
-
-        DB::table('question')->where('qs_id','=',$id)->update([
+        DB::beginTransaction();
+        try {
+        DB::table('question')->where('qs_id','=',$id)->update(
+        [
             'qs_id' => $request->qs_id, 
             'qs_question' => $request->qs_question,
             'qs_ch_no_ans'=> $request->qs_ch_no_ans,
@@ -122,8 +124,25 @@ class QuestionController extends Controller
             'qs_crs_code'=> $request->qs_crs_code,
             'qs_tch_code' => $request->qs_tch_code,
             'qs_ex_date'=> $request->qs_ex_date
-        ]
-        );
+        ]);
+        DB::select('call changechoice(?,?,?,?,?)',[$request->qs_id,$request->ch_no1,$request->ch_no2,$request->ch_no3,$request->ch_no4]);
+        } catch(ValidationException $e)
+        {
+            DB::rollback();
+        }
+        DB::commit();
+        
+        // DB::table('question')->where('qs_id','=',$id)->update([
+        //     'qs_id' => $request->qs_id, 
+        //     'qs_question' => $request->qs_question,
+        //     'qs_ch_no_ans'=> $request->qs_ch_no_ans,
+        //     'qs_ex_time' => $request->qs_ex_time,
+        //     'qs_score'=> $request->qs_score,
+        //     'qs_crs_code'=> $request->qs_crs_code,
+        //     'qs_tch_code' => $request->qs_tch_code,
+        //     'qs_ex_date'=> $request->qs_ex_date
+        // ]
+        // );
 
         return redirect('question');
     }
